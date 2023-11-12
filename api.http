@@ -1,0 +1,30 @@
+### Test
+GET http://localhost:3000/
+
+
+### Return all movies
+GET http://localhost:3000/movies
+
+### Return one movie by id
+GET http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+### Return movies by genre
+GET http://localhost:3000/movies?genre=action
+
+### Post a movie
+POST  http://localhost:3000/movies
+Content-Type: application/json
+
+ {
+    "title": 111,
+    "year": "222"
+
+  }
+
+### Update a movie
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+ {
+    "year": 2024
+  }
