@@ -21,6 +21,24 @@ Content-Type: application/json
 
   }
 
+### Post a movie
+POST  http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "id": "5ad1a235-0d9c-410a-b32b-220d91689a08",
+  "title": "Inception",
+  "year": 2010,
+  "director": "Christopher Nolan",
+  "duration": 148,
+  "poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
+  "genre": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+  ],
+  "rate": 8.8
+}
 ### Update a movie
 PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
@@ -28,3 +46,6 @@ Content-Type: application/json
  {
     "year": 2024
   }
+
+### Delete a movie
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
