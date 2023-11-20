@@ -6,7 +6,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/movies
 
 ### Return one movie by id
-GET http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+GET http://localhost:3000/movies/1
 
 ### Return movies by genre
 GET http://localhost:3000/movies?genre=action
@@ -26,7 +26,7 @@ POST  http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "id": "5ad1a235-0d9c-410a-b32b-220d91689a08",
+
   "title": "Inception",
   "year": 2010,
   "director": "Christopher Nolan",
