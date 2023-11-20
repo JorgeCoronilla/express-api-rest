@@ -1,5 +1,5 @@
 import express, { json } from 'express';
-import { swaggerDocs } from './v1/swagger.js';
+import { swaggerDocs } from './swagger.js';
 import cookieSession from 'cookie-session';
 import passport from 'passport';
 import { createMovieRouter } from './routes/movies.js';
@@ -37,13 +37,6 @@ export const createApp = ({ movieModel }) => {
     next();
   });
 
-  // app.use(
-  //   session({
-  //     secret: 'your_secret_here',
-  //     resave: false,
-  //     saveUninitialized: false,
-  //   })
-  // );
   app.use(passport.initialize());
   app.use(passport.session());
 

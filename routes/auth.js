@@ -3,11 +3,6 @@ import passport from 'passport';
 
 const authRouter = Router();
 
-// authRouter.get(
-//   '/google',
-//   passport.authenticate('google', { scope: ['profile'] })
-// );
-
 authRouter.get(
   '/google',
   passport.authenticate('google', {
@@ -22,11 +17,6 @@ authRouter.get('/login/failed', (req, res) => {
     message: 'login failed',
   });
 });
-
-// authRouter.get('/logout', (req, res) => {
-//   req.logout();
-//   res.redirect('http://localhost:5173/');
-// });
 
 authRouter.get('/logout', (req, res, next) => {
   req.logout((err) => {
