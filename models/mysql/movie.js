@@ -1,16 +1,8 @@
 import mysql from 'mysql2/promise';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const defaultConfig = {
-  host: 'localhost',
-  user: 'root',
-  port: 3306,
-  password: '%Meraclis59$',
-  database: 'moviesdb',
-};
-
-const connectionString =
-  process.env.DATABASE_URL ??
-  'mysql://vooqz1ntb2bw5rmmioea:pscale_pw_DP92NLJwXtwpfLhuC1OYQM3HJHpvlK739jfLjCbF0gE@aws.connect.psdb.cloud/moviesdb?ssl={"rejectUnauthorized":true}';
+const connectionString = process.env.DATABASE_URL ?? procces.env.DATABASE_URL;
 const connection = await mysql.createConnection(connectionString);
 
 export class MovieModel {

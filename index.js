@@ -1,5 +1,5 @@
 import express, { json } from 'express';
-// import session from 'express-session';
+import { swaggerDocs } from './v1/swagger.js';
 import cookieSession from 'cookie-session';
 import passport from 'passport';
 import { createMovieRouter } from './routes/movies.js';
@@ -57,5 +57,6 @@ export const createApp = ({ movieModel }) => {
   const PORT = process.env.PORT ?? 3000;
   app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
+    swaggerDocs(app, PORT);
   });
 };
